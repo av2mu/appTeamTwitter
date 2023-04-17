@@ -11,6 +11,8 @@
 		95806FC629EDF249008D6340 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95806FC529EDF249008D6340 /* ContentView.swift */; };
 		95806FC829EDF24A008D6340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95806FC729EDF24A008D6340 /* Assets.xcassets */; };
 		95806FCC29EDF24A008D6340 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95806FCB29EDF24A008D6340 /* Preview Assets.xcassets */; };
+		95806FD429EDF32B008D6340 /* TweetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95806FD329EDF32B008D6340 /* TweetRowView.swift */; };
+		95806FD629EDF618008D6340 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95806FD529EDF618008D6340 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		95806FC729EDF24A008D6340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95806FC929EDF24A008D6340 /* twitterRemake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = twitterRemake.entitlements; sourceTree = "<group>"; };
 		95806FCB29EDF24A008D6340 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95806FD329EDF32B008D6340 /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
+		95806FD529EDF618008D6340 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				95806FC729EDF24A008D6340 /* Assets.xcassets */,
 				95806FC929EDF24A008D6340 /* twitterRemake.entitlements */,
 				95806FCA29EDF24A008D6340 /* Preview Content */,
+				95806FD329EDF32B008D6340 /* TweetRowView.swift */,
+				95806FD529EDF618008D6340 /* FeedView.swift */,
 			);
 			path = twitterRemake;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95806FD629EDF618008D6340 /* FeedView.swift in Sources */,
 				95806FC629EDF249008D6340 /* ContentView.swift in Sources */,
 				95806FC429EDF249008D6340 /* twitterRemakeApp.swift in Sources */,
+				95806FD429EDF32B008D6340 /* TweetRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
