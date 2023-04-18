@@ -14,8 +14,10 @@ struct TweetRowView: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack(alignment: .top, spacing: 12) {
-                Circle()
+                Image("IMG_0305")
+                    .resizable()
                     .frame(width: 56, height: 56)
+                    .clipShape(Circle())
                     .foregroundColor(Color(.systemMint))
                 VStack(alignment:.leading, spacing: 4){
                     HStack{
