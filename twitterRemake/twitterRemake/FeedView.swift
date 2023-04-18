@@ -10,12 +10,12 @@ import SwiftUI
 struct FeedView: View {
     var body: some View {
         ScrollView{
-            VStack{
+            VStack(spacing: -5){
                 Image(systemName: "bird")
                 Group{
-                    TweetRowView(tweetText: "ok bye", tweetTime: "1m")
-                    TweetRowView(tweetText: "i hate it here", tweetTime: "2m")
-                    TweetRowView(tweetText: "am i the only one here", tweetTime: "2m")
+                    TweetRowView(tweetText: "here’s my impression of a guy that doesn’t know what day of the week it is: well happy thursday everyone", tweetTime: "1m")
+                    TweetRowView(tweetText: "shrimp fried rice ?", tweetTime: "2m")
+                    TweetRowView(tweetText: "told my girl i love tory lanez and she took me bowling with boris johnson", tweetTime: "2m")
                     TweetRowView(tweetText: "helloooooooo", tweetTime: "2m")
                     TweetRowView(tweetText: "can anyone hear me", tweetTime: "2m")
                     TweetRowView(tweetText: "hello world", tweetTime: "2m")

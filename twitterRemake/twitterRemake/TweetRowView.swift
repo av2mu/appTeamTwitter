@@ -12,7 +12,7 @@ struct TweetRowView: View {
     var tweetTime: String
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, spacing: -5){
             HStack(alignment: .top, spacing: 12) {
                 Image("IMG_0305")
                     .resizable()
