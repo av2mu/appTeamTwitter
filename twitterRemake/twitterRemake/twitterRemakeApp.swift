@@ -11,7 +11,7 @@ import SwiftUI
 struct twitterRemakeApp: App {
     var body: some Scene {
         WindowGroup {
-            FeedView()
+            NavBarView()
         }
     }
 }

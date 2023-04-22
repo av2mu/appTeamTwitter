@@ -10,6 +10,13 @@ import SwiftUI
 struct TweetRowView: View {
     var tweetText: String
     var tweetTime: String
+    @State var tweetLikes: Int
+    @State var tweetRTs: Int
+    
+    @State private var showReply = false
+    @State private var isLiked = false
+    @State private var isRTd = false
+    @State private var isBMd = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: -5){
@@ -37,27 +44,82 @@ struct TweetRowView: View {
             }
             HStack{
                 Button{
+                    showReply.toggle()
                 } label: {
                     Image(systemName: "bubble.left")
                         .font(.subheadline)
+                }.sheet(isPresented: $showReply){
+                    ReplyView()
                 }
+                
+                
                 Spacer()
                 Button{
+                    isRTd.toggle()
                 } label: {
-                    Image(systemName: "arrow.2.squarepath")
-                        .font(.subheadline)
+                    if(isRTd){
+                        Image(systemName: "arrow.2.squarepath")
+                            .foregroundColor(Color.green)
+                            .font(.subheadline)
+                    }
+                    else{
+                        Image(systemName: "arrow.2.squarepath")
+                            .font(.subheadline)
+                            
+                    }
+                    
                 }
+                if(isRTd){
+                    Text(String(tweetRTs + 1))
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                }else{
+                    Text(String(tweetRTs))
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                }
+                
                 Spacer()
                 Button{
+                    isLiked.toggle()
                 } label: {
-                    Image(systemName: "heart")
-                        .font(.subheadline)
+                    if(!isLiked){
+                        Image(systemName: "heart")
+                            .font(.subheadline)
+                    }
+                    else{
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(Color.red)
+                    }
+                    
                 }
+                if(isLiked){
+                    Text(String(tweetLikes + 1))
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                }else{
+                    Text(String(tweetLikes))
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                }
+                
                 Spacer()
                 Button{
+                    isBMd.toggle()
+                    
                 } label: {
-                    Image(systemName: "bookmark")
-                        .font(.subheadline)
+                    if(isBMd){
+                        Image(systemName: "bookmark.fill")
+                            .foregroundColor(Color.blue)
+                            .font(.subheadline)
+                        
+                    }
+                    else{
+                        Image(systemName: "bookmark")
+                            .font(.subheadline)
+                            
+                    }
+                    
                 }
             }
             .padding()
@@ -68,6 +130,6 @@ struct TweetRowView: View {
 
 struct TweetRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetRowView(tweetText: "wie gehts fellas", tweetTime: "36m")
+        TweetRowView(tweetText: "joe mama", tweetTime: "36m", tweetLikes: 999, tweetRTs: 36)
     }
 }
